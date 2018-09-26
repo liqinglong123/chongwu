@@ -31,10 +31,7 @@ header {
     <div id="app">
         <header>
             <ul>
-                <!-- <li v-for="item in tabNav" :class="{cur : item.title == $route.name}" @click="routerGo(item.url)">{{item.title}}</li> -->
-                <!-- v-touch 使用方式 tag 就是模拟标签  点击事件换成 @tap tag="li"就是li标签-->
                 <v-touch tag="li" v-for="item in tabNav" :class="{cur : item.title == $route.name}" @tap="routerGo(item.url)" :key="item.id">{{item.title}}</v-touch>
-                <!-- 循环一个组件 需要加:key="item.id" 没啥用  不加就算有警告 也不影响 -->
             </ul>
         </header>
       <transition name="slide-fade">
